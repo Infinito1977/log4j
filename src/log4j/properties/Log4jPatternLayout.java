@@ -8,7 +8,7 @@ public class Log4jPatternLayout extends Thread {
 
 	public static void main(String[] args) {
 		// Use custom properties file and reload it every 5th second
-		PropertyConfigurator.configureAndWatch("log4j-custom.properties", 5 * 1000);
+		PropertyConfigurator.configureAndWatch("log4j-custom.properties", 1000);
 		new Log4jPatternLayout().start();
 	}
 
