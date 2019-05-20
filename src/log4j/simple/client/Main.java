@@ -1,4 +1,4 @@
-package log4j.client;
+package log4j.simple.client;
 
 import org.apache.log4j.ConsoleAppender;
 import org.apache.log4j.FileAppender;
@@ -6,7 +6,6 @@ import org.apache.log4j.HTMLLayout;
 import org.apache.log4j.Layout;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.apache.log4j.PatternLayout;
 import org.apache.log4j.SimpleLayout;
 
 public class Main {
@@ -34,18 +33,13 @@ public class Main {
 		simpleLogging(new SimpleLayout(), "logs/logs.log");
 	}
 	
-	private static void patternLayout() {
-		simpleLogging(new PatternLayout("%d %l: %-5p [%t]: %m (%r)%n"), "logs/logs.log");
-	}
-	
 	private static void htmlLayout() {
 		simpleLogging(new HTMLLayout(), "logs/logs.html"); 
 	}
 	
 	public static void main(String[] args) {
 //		simpleLayout();
-		patternLayout();
-//		htmlLayout();
+		htmlLayout();
 	}
 
 }
