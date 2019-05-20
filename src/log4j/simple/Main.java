@@ -1,8 +1,7 @@
-package log4j.simple.client;
+package log4j.simple;
 
 import org.apache.log4j.ConsoleAppender;
 import org.apache.log4j.FileAppender;
-import org.apache.log4j.HTMLLayout;
 import org.apache.log4j.Layout;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -11,7 +10,7 @@ import org.apache.log4j.SimpleLayout;
 public class Main {
 	private static Logger logger = Logger.getRootLogger();
 	
-	private static void simpleLogging(Layout layout, String logFile) {
+	private static void startLogging(Layout layout, String logFile) {
 		try {
 			ConsoleAppender consoleAppender = new ConsoleAppender(layout);
 			logger.addAppender(consoleAppender);
@@ -29,17 +28,8 @@ public class Main {
 		logger.fatal("Fatal-Meldung");
 	}
 	
-	private static void simpleLayout() {
-		simpleLogging(new SimpleLayout(), "logs/logs.log");
-	}
-	
-	private static void htmlLayout() {
-		simpleLogging(new HTMLLayout(), "logs/logs.html"); 
-	}
-	
 	public static void main(String[] args) {
-//		simpleLayout();
-		htmlLayout();
+		startLogging(new SimpleLayout(), "logs/logs.log");
 	}
 
 }
