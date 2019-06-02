@@ -1,4 +1,4 @@
-package log4j.pattern_layout;
+package log4j.client.pattern_layout;
 
 import org.apache.log4j.ConsoleAppender;
 import org.apache.log4j.DailyRollingFileAppender;
@@ -6,7 +6,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
 
-public class Log4jPatternLayout extends Thread {
+public class Log4jPatternLayout2Threads extends Thread {
 	private static Logger logger = Logger.getRootLogger();
 
 	public static void main(String[] args) {
@@ -21,8 +21,8 @@ public class Log4jPatternLayout extends Thread {
 		} catch (Exception ex) {
 			System.out.println(ex);
 		}
-		new Log4jPatternLayout().start();
-		new Log4jPatternLayout().start();
+		new Log4jPatternLayout2Threads().start();
+		new Log4jPatternLayout2Threads().start();
 	}
 
 	@Override

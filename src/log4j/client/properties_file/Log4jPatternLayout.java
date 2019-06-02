@@ -1,4 +1,4 @@
-package log4j.properties;
+package log4j.client.properties_file;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
