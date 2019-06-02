@@ -1,13 +1,13 @@
-package log4j.client.simple;
+package log4j.client.html;
 
 import org.apache.log4j.ConsoleAppender;
 import org.apache.log4j.FileAppender;
+import org.apache.log4j.HTMLLayout;
 import org.apache.log4j.Layout;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.apache.log4j.SimpleLayout;
 
-public class Main {
+public class HtmlLayout {
 	private static Logger logger = Logger.getRootLogger();
 	
 	private static void startLogging(Layout layout, String logFile) {
@@ -29,7 +29,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		startLogging(new SimpleLayout(), "logs/logs.log");
+		startLogging(new HTMLLayout(), "logs/logs.html"); 
 	}
 
 }
