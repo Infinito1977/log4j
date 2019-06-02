@@ -1,4 +1,4 @@
-package log4j.client.simple;
+package log4j.simple;
 
 import org.apache.log4j.ConsoleAppender;
 import org.apache.log4j.FileAppender;

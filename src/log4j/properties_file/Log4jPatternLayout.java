@@ -1,13 +1,15 @@
-package log4j.client.properties_file;
+package log4j.properties_file;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
-public class DefaultPropertiesFile extends Thread {
+public class Log4jPatternLayout extends Thread {
 	private static Logger logger = Logger.getRootLogger();
 
 	public static void main(String[] args) {
-		// Load default properties file src/log4j.properties
-		new DefaultPropertiesFile().start();
+		// Use custom properties file and reload it every 5th second
+		PropertyConfigurator.configureAndWatch("log4j-custom.properties", 1000);
+		new Log4jPatternLayout().start();
 	}
 
 	@Override

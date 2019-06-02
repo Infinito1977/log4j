@@ -1,4 +1,4 @@
-package log4j.client.pattern_layout;
+package log4j.pattern_layout;
 
 import org.apache.log4j.ConsoleAppender;
 import org.apache.log4j.DailyRollingFileAppender;
